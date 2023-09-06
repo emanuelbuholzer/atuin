@@ -1,5 +1,6 @@
 use std::collections::{HashMap, HashSet};
 
+use ilog::IntLog;
 use chrono::{prelude::*, Duration};
 use clap::Parser;
 use crossterm::style::{Color, ResetColor, SetAttribute, SetForegroundColor};
@@ -42,7 +43,7 @@ fn compute_stats(history: &[History], count: usize) -> Result<()> {
     }
 
     let max = top.iter().map(|x| x.1).max().unwrap();
-    let num_pad = max.ilog10() as usize + 1;
+    let num_pad = max.log10() as usize + 1;
 
     for (command, count) in top {
         let gray = SetForegroundColor(Color::Grey);

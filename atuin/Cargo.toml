@@ -72,6 +72,7 @@ fuzzy-matcher = "0.3.7"
 colored = "2.0.4"
 ratatui = "0.21"
 tracing = "0.1"
+ilog = "1.0.1"
 
 
 [dependencies.tracing-subscriber]
